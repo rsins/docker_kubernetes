@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ravi-py-rest
+spec:
+  selector:
+    matchLabels:
+      run: load-balancer-example
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        run: load-balancer-example
+    spec:
+      containers:
+        - name: ravi-py-rest
+          image: ravi-py-rest:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5050
+              protocol: TCP

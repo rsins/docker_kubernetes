@@ -1,21 +1,22 @@
-# set base image (host OS)
+# Set Base Image
 FROM python:3.8
 
-MAINTAINER Ravi Singh
+LABEL maintainer="Ravi Singh"
 
 ENV TERM xterm-256color
 
-# set the working directory in the container
+# api server works on this port
+EXPOSE 5050
+
+# Set Working Directory in the container
 WORKDIR /code
 
-# copy the dependencies file to the working directory
+# Copy required files to working directory
 COPY requirements.txt .
-
-# install dependencies
-RUN pip install -r requirements.txt
-
-# copy the content of the local src directory to the working directory
 COPY api.py .
 
-# command to run on container start
+# Install python dependencies
+RUN pip install -r requirements.txt
+
+# Start below command when container is started
 CMD [ "python", "./api.py" ]

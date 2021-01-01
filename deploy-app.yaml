@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: ravi-py-rest
-          image: ravi-py-rest:latest
-          imagePullPolicy: Never
+          image: rsins/ravi-py-rest:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5050
               protocol: TCP

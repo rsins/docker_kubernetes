@@ -60,7 +60,7 @@ Output will be similar to below -
 <a name="markdown-create-docker"></a>
 ## Build python app to be deployed in pods/containers
 Check the repo `ravi-py-rest` for more detail.
-Git Repo: [ravi-py-rest](../ravi-py-rest)
+Git Repo: [ravi-py-rest](../../../ravi-py-rest)
 
 <a name="markdown-deploy-docker-app-to-kind"></a>
 ## Deploy your docker app instand to kind pods
